@@ -1,1 +1,3 @@
 # Opencode
+
+opencode github install
