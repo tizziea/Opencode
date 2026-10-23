@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Rivas | Desarrollador Web</title>
+  <meta name="description" content="Portfolio de Lucas Rivas, desarrollador web en formación. Proyectos, habilidades y contacto.">
+  <meta name="theme-color" content="#070a12">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070a12'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='26' font-weight='bold' fill='%237c5cff' text-anchor='middle'%3ELR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <!--
+    Plantilla de portfolio.
+    Personalizá: nombre, email (hola@lucasrivas.dev), enlaces con data-placeholder,
+    textos de proyectos y redes sociales por tus datos reales.
+  -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Sprite de íconos -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+      <symbol id="icon-map-pin" viewBox="0 0 24 24"><path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></symbol>
+      <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z"/><path d="M19 17.5 19.7 20l2.3.7-2.3.7L19 24l-.7-2.6-2.3-.7 2.3-.7.7-2.5Z"/></symbol>
+      <symbol id="icon-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+      <symbol id="icon-accessibility" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M4 9h16M12 7v6m0 0-3.5 8M12 13l3.5 8"/></symbol>
+      <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-.6 4M20 4v7h-7"/></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.7.41.35.78 1.05.78 2.12v3.14c0 .31.2.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></symbol>
+    </defs>
+  </svg>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Lucas Rivas, ir al inicio">
+        <span class="brand__mark">LR</span>
+        <span class="brand__name">Lucas Rivas</span>
+      </a>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
+          <li><a class="nav__link" href="#habilidades">Habilidades</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contacto">Hablemos</a>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Presentación -->
+    <section class="hero" id="inicio">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="badge">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Disponible para proyectos y oportunidades
+          </p>
+          <h1 class="hero__title">
+            Hola, soy Lucas.<br>
+            Creo <span class="gradient-text">experiencias web</span> que se sienten simples.
+          </h1>
+          <p class="hero__lead">
+            Soy desarrollador web en formación y vivo en Buenos Aires. Diseño y construyo
+            interfaces limpias, accesibles y adaptables con HTML, CSS y JavaScript.
+            Estoy listo para mi primera gran oportunidad.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#proyectos">
+              Ver mis proyectos
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-down"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contacto">
+              Hablemos
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+            </a>
+          </div>
+          <ul class="hero__meta">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>Buenos Aires, Argentina</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg>Front-end en formación</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg>Respuesta en 24 h</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="code-card">
+            <div class="code-card__bar">
+              <span class="code-card__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="code-card__file">perfil.js</span>
+              <span class="code-card__tag">JavaScript</span>
+            </div>
+            <pre class="code-card__body" aria-hidden="true"><code><span class="tok-com">// Siempre aprendiendo algo nuevo</span>
+<span class="tok-key">const</span> <span class="tok-var">lucas</span> = {
+  rol: <span class="tok-str">'Desarrollador web'</span>,
+  ubicacion: <span class="tok-str">'Buenos Aires, AR'</span>,
+  stack: [<span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>, <span class="tok-str">'JavaScript'</span>],
+  aprendiendo: [<span class="tok-str">'React'</span>, <span class="tok-str">'a11y'</span>],
+  disponible: <span class="tok-key">true</span>,
+  <span class="tok-fn">saludar</span>() {
+    <span class="tok-key">return</span> <span class="tok-str">'¡Hablemos de tu proyecto!'</span>;
+  }
+};
+
+<span class="tok-fn">console</span>.<span class="tok-fn">log</span>(lucas.<span class="tok-fn">saludar</span>());<span class="code-card__cursor"></span></code></pre>
+          </div>
+          <span class="float-chip float-chip--top"><i aria-hidden="true"></i>HTML5</span>
+          <span class="float-chip float-chip--bottom"><i aria-hidden="true"></i>JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="section" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">01 <span aria-hidden="true">/</span> Sobre mí</p>
+          <h2 id="titulo-sobre-mi">Curiosidad, método y muchas ganas de construir.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="about-copy__lead">
+              Soy Lucas Rivas, desarrollador web junior. Empecé creando sitios para amigos
+              y hoy dedico cada día a profundizar en <strong>JavaScript, buenas prácticas
+              y diseño de interfaces</strong>.
+            </p>
+            <p>
+              Me gusta entender el problema antes de escribir la primera línea de código.
+              Trabajo con atención al detalle, código ordenado y una obsesión sana por que
+              todo se vea y funcione bien en cualquier pantalla.
+            </p>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>Código limpio, semántico y fácil de mantener.</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>Diseño responsive desde el primer boceto.</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>Aprendizaje constante y feedback abierto.</li>
+            </ul>
+            <div class="stats">
+              <div class="stat"><span class="stat__value">3</span><span class="stat__label">Proyectos publicados</span></div>
+              <div class="stat"><span class="stat__value">8</span><span class="stat__label">Tecnologías en uso</span></div>
+              <div class="stat"><span class="stat__value">100%</span><span class="stat__label">Ganas de aprender</span></div>
+            </div>
+          </div>
+
+          <aside class="focus-panel reveal" aria-label="Mi enfoque de trabajo">
+            <p class="focus-panel__label">Mi enfoque</p>
+            <ul class="focus-list">
+              <li>
+                <span class="focus-icon"><svg class="icon" aria-hidden="true"><use href="#icon-layers"/></svg></span>
+                <div>
+                  <h3>Primero el problema</h3>
+                  <p>Entiendo el objetivo y el público antes de proponer una solución.</p>
+                </div>
+              </li>
+              <li>
+                <span class="focus-icon"><svg class="icon" aria-hidden="true"><use href="#icon-accessibility"/></svg></span>
+                <div>
+                  <h3>Diseño inclusivo</h3>
+                  <p>Interfaces legibles, accesibles y pensadas con enfoque mobile first.</p>
+                </div>
+              </li>
+              <li>
+                <span class="focus-icon"><svg class="icon" aria-hidden="true"><use href="#icon-refresh"/></svg></span>
+                <div>
+                  <h3>Mejora continua</h3>
+                  <p>Mido, aprendo y refactorizo: el código también se cuida con el tiempo.</p>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <!-- Proyectos -->
+    <section class="section section--alt" id="proyectos" aria-labelledby="titulo-proyectos">
+      <div class="container">
+        <div class="section-head section-head--row reveal">
+          <div>
+            <p class="eyebrow">02 <span aria-hidden="true">/</span> Proyectos</p>
+            <h2 id="titulo-proyectos">Cosas que construí para aprender haciendo.</h2>
+            <p>Proyectos personales pensados para resolver problemas reales y practicar cada tecnología.</p>
+          </div>
+          <a class="link-arrow" href="#" data-placeholder>
+            Ver todos en GitHub
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg>
+          </a>
+        </div>
+
+        <div class="projects-grid" data-stagger>
+          <article class="project-card reveal">
+            <div class="thumb thumb--coffee">
+              <div class="mock mock--landing" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <div class="mock__body">
+                  <div class="mock__nav">
+                    <span class="mock__brand"></span>
+                    <span class="mock__navlinks"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="mock__hero">
+                    <div class="mock__copy">
+                      <span class="mock__eyebrow"></span>
+                      <span class="mock__title"></span>
+                      <span class="mock__title mock__title--short"></span>
+                      <span class="mock__line"></span>
+                      <span class="mock__line mock__line--short"></span>
+                      <span class="mock__button"></span>
+                    </div>
+                    <span class="mock__art"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <h3>Café Aurora</h3>
+              <p>Landing page para una cafetería de especialidad, con menú, galería y formulario de reservas.</p>
+              <div class="project-card__links">
+                <a class="project-link" href="#" data-placeholder>Ver demo <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a>
+                <a class="project-link" href="#" data-placeholder>Código <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="thumb thumb--tasks">
+              <div class="mock mock--tasks" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <div class="mock__body">
+                  <div class="mock__app-head">
+                    <span class="mock__title mock__title--tiny"></span>
+                    <span class="mock__pill"></span>
+                  </div>
+                  <ul class="mock-tasks">
+                    <li><span class="mock-check is-done"></span><span class="mock__line"></span></li>
+                    <li><span class="mock-check is-done"></span><span class="mock__line"></span></li>
+                    <li><span class="mock-check"></span><span class="mock__line"></span></li>
+                    <li><span class="mock-check"></span><span class="mock__line"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <ul class="tags"><li>JavaScript</li><li>LocalStorage</li><li>CSS</li></ul>
+              <h3>Tareas al día</h3>
+              <p>Aplicación para organizar pendientes con almacenamiento local, filtros y modo oscuro.</p>
+              <div class="project-card__links">
+                <a class="project-link" href="#" data-placeholder>Ver demo <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a>
+                <a class="project-link" href="#" data-placeholder>Código <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="thumb thumb--weather">
+              <div class="mock mock--weather" aria-hidden="true">
+                <div class="mock__bar"><i></i><i></i><i></i></div>
+                <div class="mock__body">
+                  <div class="mock-weather">
+                    <span class="mock-weather__city"></span>
+                    <div class="mock-weather__main">
+                      <span class="mock-sun"></span>
+                      <div>
+                        <span class="mock-weather__temp">24°</span>
+                        <span class="mock-weather__desc"></span>
+                      </div>
+                    </div>
+                    <div class="mock-weather__days"><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <ul class="tags"><li>JavaScript</li><li>Fetch API</li><li>Responsive</li></ul>
+              <h3>Clima Ahora</h3>
+              <p>Consulta el clima actual de cualquier ciudad usando una API pública y datos en tiempo real.</p>
+              <div class="project-card__links">
+                <a class="project-link" href="#" data-placeholder>Ver demo <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a>
+                <a class="project-link" href="#" data-placeholder>Código <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Habilidades -->
+    <section class="section" id="habilidades" aria-labelledby="titulo-habilidades">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 <span aria-hidden="true">/</span> Habilidades</p>
+          <h2 id="titulo-habilidades">Herramientas que ya uso y otras que estoy incorporando.</h2>
+          <p>Un stack en crecimiento, construido con práctica real y proyectos propios.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-panel reveal">
+            <div class="skills-panel__head">
+              <h3>Nivel actual</h3>
+              <span>Autoevaluación honesta</span>
+            </div>
+            <div class="skill">
+              <div class="skill__top"><span>HTML5</span><span class="skill__value">90%</span></div>
+              <div class="bar"><span class="bar__fill" style="--level: 90%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill__top"><span>CSS3</span><span class="skill__value">85%</span></div>
+              <div class="bar"><span class="bar__fill" style="--level: 85%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill__top"><span>JavaScript</span><span class="skill__value">72%</span></div>
+              <div class="bar"><span class="bar__fill" style="--level: 72%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill__top"><span>Git y GitHub</span><span class="skill__value">65%</span></div>
+              <div class="bar"><span class="bar__fill" style="--level: 65%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill__top"><span>Diseño responsive</span><span class="skill__value">88%</span></div>
+              <div class="bar"><span class="bar__fill" style="--level: 88%"></span></div>
+            </div>
+            <p class="skills-note">Cada porcentaje refleja mi nivel de comodidad, no una certificación.</p>
+          </div>
+
+          <div class="skills-side" data-stagger>
+            <div class="side-card reveal">
+              <h3>Herramientas</h3>
+              <ul class="chips">
+                <li>VS Code</li><li>Git</li><li>GitHub</li>
+                <li>Figma</li><li>Netlify</li><li>DevTools</li>
+              </ul>
+            </div>
+            <div class="side-card reveal">
+              <h3>Aprendiendo ahora</h3>
+              <ul class="learning-list">
+                <li>
+                  <span class="learning-dot" aria-hidden="true"></span>
+                  <div><strong>JavaScript moderno</strong><span>ES6+, módulos y asincronía</span></div>
+                </li>
+                <li>
+                  <span class="learning-dot" aria-hidden="true"></span>
+                  <div><strong>React</strong><span>Componentes, estado y hooks</span></div>
+                </li>
+                <li>
+                  <span class="learning-dot" aria-hidden="true"></span>
+                  <div><strong>Accesibilidad web</strong><span>HTML semántico, ARIA y contraste</span></div>
+                </li>
+              </ul>
+            </div>
+            <div class="side-card side-card--accent reveal">
+              <svg class="icon" aria-hidden="true"><use href="#icon-sparkles"/></svg>
+              <p>Creo que la mejor forma de aprender es construyendo. Por eso cada curso termina en un proyecto real.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contacto -->
+    <section class="section section--alt" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">04 <span aria-hidden="true">/</span> Contacto</p>
+          <h2 id="titulo-contacto">¿Tenés una idea?<br>Construyámosla juntos.</h2>
+          <p class="contact-copy__text">
+            Estoy buscando mi primera oportunidad laboral o proyectos freelance donde pueda
+            aportar y seguir creciendo. Escribime y te respondo en menos de 24 horas.
+          </p>
+          <a class="contact-email" href="mailto:hola@lucasrivas.dev">
+            hola@lucasrivas.dev
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"/></svg>
+          </a>
+          <ul class="socials">
+            <li><a href="#" data-placeholder aria-label="Perfil de GitHub (enlace de ejemplo)"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a></li>
+            <li><a href="#" data-placeholder aria-label="Perfil de LinkedIn (enlace de ejemplo)"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg></a></li>
+            <li><a href="mailto:hola@lucasrivas.dev" aria-label="Enviar un correo"><svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg></a></li>
+          </ul>
+          <p class="availability">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Disponible para proyectos freelance y posiciones junior
+          </p>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required aria-describedby="error-nombre">
+                <p class="field__error" id="error-nombre"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="vos@email.com" required aria-describedby="error-email">
+                <p class="field__error" id="error-email"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contame sobre tu idea o proyecto..." required aria-describedby="error-mensaje"></textarea>
+              <p class="field__error" id="error-mensaje"></p>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="empresa">No completar</label>
+              <input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn--primary btn--full" type="submit" id="submit-btn">
+              Enviar mensaje
+              <svg class="icon" aria-hidden="true"><use href="#icon-send"/></svg>
+            </button>
+            <p class="form-note">Sin servidores de por medio: el formulario abrirá tu cliente de correo con el mensaje listo para enviar.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">LR</span>
+        <div>
+          <strong>Lucas Rivas</strong>
+          <span>Desarrollador web · Buenos Aires</span>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Enlaces del pie">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> Lucas Rivas. Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
