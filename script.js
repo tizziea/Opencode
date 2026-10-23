@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Lucas Rivas — Portfolio
+   Tiziano E. — Portfolio
    Interacciones: menú mobile, link activo, animaciones y formulario
    ========================================================================== */
 
@@ -15,7 +15,7 @@
   const navLinks = $$(".nav__link");
   const sections = $$("main section[id]");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const EMAIL = "hola@lucasrivas.dev";
+  const EMAIL = "echilleytizianom@gmail.com";
 
   /* Año dinámico ---------------------------------------------------------- */
   const year = $("#year");
@@ -232,7 +232,7 @@
       const mensaje = fields.mensaje.el.value.trim();
 
       const subject = encodeURIComponent(`Consulta de ${nombre} desde tu portfolio`);
-      const body = encodeURIComponent(`Hola Lucas:\n\n${mensaje}\n\n—\n${nombre}\n${email}`);
+      const body = encodeURIComponent(`Hola Tiziano:\n\n${mensaje}\n\n—\n${nombre}\n${email}`);
       const mailto = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
 
       setStatus("Preparando tu mensaje…");

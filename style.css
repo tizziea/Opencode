@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Lucas Rivas — Portfolio
+   Tiziano E. — Portfolio
    Tema oscuro, acentos violeta/cian, tipografía Space Grotesk + Inter
    ========================================================================== */
 
@@ -904,6 +904,12 @@ button {
     linear-gradient(145deg, #191331, #0a0a18);
 }
 
+.thumb--game {
+  background:
+    radial-gradient(circle at 24% 20%, rgba(236, 72, 153, 0.28), transparent 55%),
+    linear-gradient(145deg, #24102b, #0b0a16);
+}
+
 .mock {
   width: min(100%, 300px);
   overflow: hidden;
@@ -1146,6 +1152,115 @@ button {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.06);
 }
+
+.mock-game {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mock-game__hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 14px;
+}
+
+.mock-game__score {
+  color: #f8fafc;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.mock-game__lives {
+  display: flex;
+  gap: 4px;
+}
+
+.mock-game__lives i {
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: rgba(236, 72, 153, 0.85);
+}
+
+.mock-game__stage {
+  position: relative;
+  height: 82px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #1b1030 0%, #120c20 62%, #1d1230 63%, #0d0a16 100%);
+}
+
+.mock-game__sun {
+  position: absolute;
+  top: 12px;
+  right: 22px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #fbcfe8, #ec4899);
+  box-shadow: 0 0 22px rgba(236, 72, 153, 0.5);
+}
+
+.mock-game__ground {
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  left: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.mock-game__player {
+  position: absolute;
+  bottom: 17px;
+  left: 24px;
+  width: 16px;
+  height: 20px;
+  border-radius: 3px 3px 2px 2px;
+  background: linear-gradient(180deg, #a78bfa, #7c5cff);
+  box-shadow: 0 0 16px rgba(124, 92, 255, 0.55);
+}
+
+.mock-game__player::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 5px;
+  height: 3px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.mock-game__spike {
+  position: absolute;
+  bottom: 15px;
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid rgba(236, 72, 153, 0.85);
+  border-left: 6px solid transparent;
+}
+
+.mock-game__spike--a { left: 108px; }
+.mock-game__spike--b { left: 186px; border-bottom-color: rgba(251, 191, 36, 0.8); }
+
+.mock-game__coin {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fde68a, #f59e0b);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+}
+
+.mock-game__coin--a { bottom: 62px; left: 76px; }
+.mock-game__coin--b { bottom: 54px; left: 150px; }
 
 .project-card__body {
   display: flex;
